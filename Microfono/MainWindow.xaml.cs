@@ -62,11 +62,12 @@ namespace Microfono
 
             int numMuestras = bytesGrabados / 2;
 
-            int exponente = 1;
+            int exponente = 0;
             int numeroBits = 0;
 
             do
             {
+                exponente++;
                 numeroBits = (int)
                     Math.Pow(2, exponente);
             } while (numeroBits < numMuestras);
