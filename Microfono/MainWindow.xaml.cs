@@ -103,9 +103,12 @@ namespace Microfono
                     (muestrasComplejas[i].X * muestrasComplejas[i].Y));
             }
 
+            var mitadValoresAbsolutos =
+                valoresAbsolutos.Take(valoresAbsolutos.Length / 2).ToList();
+
             int indiceValorMaximo =
-                valoresAbsolutos.ToList().IndexOf(
-                    valoresAbsolutos.Max());
+                mitadValoresAbsolutos.IndexOf(
+                mitadValoresAbsolutos.Max());
 
             float frecuenciaFundamental =
                 (float)(indiceValorMaximo * formato.SampleRate)
